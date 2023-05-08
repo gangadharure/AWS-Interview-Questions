@@ -1,0 +1,506 @@
+
+Explain what is AWS?
+AWS stands for Amazon Web Service; it is a collection of remote computing services also known as cloud computing platform.  
+
+Mention what are the key components (Services) of AWS?
+The key components of AWS are	
+•	Identity and Access Management: AWS Identity and Access Management (IAM) enables you to securely control access to AWS services and resources for your users. Using IAM, you can create and manage AWS users and groups, and use permissions to allow and deny their access to AWS resources
+•	Simple Storage Service or (S3): It is a storage device and the most widely used AWS service
+•	Elastic Compute Cloud (EC2): It provides on-demand computing resources for hosting applications. It is very useful in case of                                                unpredictable workloads
+•	Elastic Block Store (EBS): Amazon Elastic Block Store (Amazon EBS) provides persistent block storage volumes for use        with Amazon EC2 instances in the AWS Cloud. Each Amazon EBS volume is automatically replicated within its Availability Zone to protect you from component failure, offering high availability and durability. Amazon EBS volumes offer the consistent and low-latency performance needed to run your workloads. With Amazon EBS, you can scale your usage up or down within minutes – all while paying a low price for only what you provision.
+
+Cloud Watch : Amazon Cloud Watch is a monitoring service for AWS cloud resources and the applications you run on AWS. You can use Amazon Cloud Watch to collect and track metrics, collect and monitor log files, set alarms, and automatically react to changes in your AWS resources
+•	Explain what is S3?
+S3 stands for Simple Storage Service. You can use S3 interface to store and retrieve any amount of data, at any time and from anywhere on the web.  For S3, the payment model is “pay as you go”.
+•	4) Explain what is AMI?
+It is a special type of virtual appliance that is used to create a virtual machine within the Amazon Elastic Compute Cloud     ("EC2"). It serves as the basic unit of deployment for services delivered using EC2
+
+•	Simple E-mail Service: It allows sending e-mail using RESTFUL API call or via regular SMTP
+
+  What does an AMI include?
+    An AMI includes the following things
+•	A template for the root volume for the instance
+•	Launch permissions decide which AWS accounts can avail the AMI to launch instances
+•	A block device mapping that determines the volumes to attach to the instance when it is launched
+
+ How many buckets can you create in AWS by default?
+By default, you can create upto 100 buckets in each of your AWS accounts.
+
+Explain can you vertically scale an Amazon instance? How?
+Yes, you can vertically scale on Amazon instance. For that
+•	Spin up a new larger instance than the one you are currently running
+•	Pause that instance and detach the root webs volume from the server and discard
+•	Then stop your live instance and detach its root volume
+•	Note the unique device ID and attach that root volume to your new server
+•	And start it again
+
+What are the 4 levels of AWS premium support ?
+Basic, Developer, Business, Enterprise
+
+How to send a file to s3 buket?
+Command: aws s3 inputpath/   S3://buketname/foldername
+
+
+
+Explain what is instances?
+
+T2 : provide moderate baseline performance
+
+T2 instances are designed to provide moderate baseline performance and the capability to burst to higher performance as required by workload.
+M3: a balance of compute, memory, and network
+This family includes the M3 instance types and provides a balance of compute, memory, and network resources, and it is a good choice for many applications.
+M4
+M4 instances are the latest generation of General Purpose Instances. This family provides a balance of compute, memory, and network resources, and it is a good choice for many applications.
+C4: Compute-optimized instances
+C4 instances are the latest generation of Compute-optimized instances, featuring the highest performing processors and the lowest price/compute performance in EC2
+X1: optimized for large-scale, enterprise-class, in-memory application
+X1 Instances are optimized for large-scale, enterprise-class, in-memory applications and have the lowest price per GiB of RAM among Amazon EC2 instance types.
+R4: optimized for memory-intensive
+R4 instances are optimized for memory-intensive applications and offer better price per GiB of RAM than R3.
+R3
+R3 instances are optimized for memory-intensive applications and offer lower price per GiB of RAM.
+
+In VPC with private and public subnets, database servers should ideally be launched into which subnet?
+With private and public subnets in VPC, database servers should ideally launch into private subnets.
+
+Mention what are the security best practices for Amazon EC2?
+For secure Amazon EC2 best practices, follow the following steps
+•	Use AWS identity and access management to control access to your AWS resources
+•	Restrict access by allowing only trusted hosts or networks to access ports on your instance
+•	Review the rules in your security groups regularly
+•	Only open up permissions that your require
+•	Disable password-based login, for instance, launched from your AMI
+
+While connecting to your instance what are the possible connection issues one might face?
+The possible connection errors one might encounter while connecting instances are
+•	Connection timed out
+•	User key not recognized by the server
+•	Host key not found, permission denied
+•	Unprotected private key file
+•	Server refused our key or No supported authentication method available
+•	Error using Mind Term on Safari Browser
+•	Error using Mac OS X RDP Client
+
+What is Amazon RDS ?
+Amazon Relational Database Service (Amazon RDS) is a web service that makes it easier to set up, operate, and scale a relational database in the cloud. It provides cost-efficient, resizeable capacity for an industry-standard relational database and manages common database administration tasks.
+
+How many AMI’s we have?
+31
+How many instance we have?
+60
+
+
+How to create Key Pair?
+
+We can create one using the Amazon EC2 console. To launch instances in multiple regions, we’ll need to create a key pair in each region.
+Following are the steps to create Key Pair:
+1.	Sign in to Amaon Web Service.
+2.	From the AWS dashboard, choose EC2 to open the Amazon EC2 console.
+3.	From the navigation bar, select a region for the key pair.
+4.	In the left navigation pane, under NETWORK & SECURITY, click Key Pairs.
+5.	Click Create Key Pair.
+6.	Enter a name for the new key pair in the Key pair name field of the Create Key Pair dialog box, and then click Create.
+7.	The private key file is automatically downloaded by your browser. The base file name is the name you specified as the name of your key pair, and the file name extension is .pem.
+What  is the default range of default VPC
+172.31.0.0/16
+
+What is the use of Key Pair?
+Key pair is used to log in to your instance securely. This is public-key cryptography to secure the login information for your instance.
+
+ What is Security Group in Amazon EC2?
+Security groups act as a firewall for associated instances, controlling both inbound and outbound traffic at the instance level.
+ How to create Security Group in Amazon EC2?
+We can create Security Group in Amazon EC2 using the Amazon EC2 console. To launch instances in multiple regions, we’ll need to create a Security Group in each region.
+Following are the steps to create Security Group in Amazon EC2:
+1.	Open the Amazon EC2 console.
+2.	From the left navigation bar, select a region for the security group.
+3.	Click Security Groups in the navigation pane.
+4.	Click Create Security Group.
+5.	Enter a name for the new security group and a description.
+6.	In the VPC list, select your VPC.
+7.	On the Inbound tab, click Add Rule for each new rule, and then click Create.
+
+How to launch an Amazon EC2 Instance?
+We can launch Linux/Windows Amazon EC2 instance using AWS Management Console. Following are the steps to create Amazon EC2 instance.
+1.	Open the Amazon EC2 console.
+2.	From the console dashboard, choose Launch Instance.
+3.	Choose an Amazon Machine Image (AMI).
+4.	Choose an Instance Type.
+5.	Click on Review and Launch to let the wizard complete the other configuration setting.
+6.	On the Review Instance Launch page, under Security Groups select a Security Group.
+7.	Click on Launch on the Review Instance Launch.
+8.	Select an Existing ket pair when it prompte for key pair.
+9.	Click on View Instance to return on the console to see instance is launching.
+
+How to connect to your Amazon EC2 Instance?
+There are several ways to connect to a Linux instance. One of the commonly used method is to connect Linux instance from Windows local machine using PuTTY.
+Following are the steps to connect to a Linux instance.
+1.	Install PuTTY on your local machine.
+2.	Get your instance ID.
+3.	Get the public DNS name of the instance.
+4.	Locate the private key.
+5.	Enable inbound SSH traffic from your IP address to your instance.
+6.	Converting Your Private Key Using PuTTYgen.
+7.	Starting a PuTTY Session.
+8.	Now you are connected to your EC2 instance.
+How to add a EBS Volume to your Amazon EC2 Instance?
+We can attach an EBS volume to one of our instances that is in the same Availability Zone as the Volume.
+Following are the steps to attache an EBS volumn to an instance using console:
+1.	Open the Amazon EC2 console at https://console.aws.amazon.com/ec2/.
+2.	In the left navigation pane, choose Volumes.
+3.	Select a volume and choose Attach Volume.
+4.	Select the instance to which you want to attach the volume.
+5.	Click on Attach.
+6.	Now connect to your instance and make the volume available.
+
+What is the size limit for Amazon EC2 instance store-backed AMIs and Amazon EBS-backed AMIs?
+All AMIs are categorized as either backed by Amazon EBS or backed by instance store.
+Backed by Amazon EBS – means that the root device for an instance launched from the AMI is an Amazon EBS volume created from an Amazon EBS snapshot.
+Backed by instance store – means that the root device for an instance launched from the AMI is an instance store volume created from a template stored in Amazon S3.
+Root device size limit for –
+Amazon EBS – Backed is 16 TiB
+Amazon Instance Store-Backed is 10 GiB
+
+How you’re charged in Amazon EC2? Explain in detail.
+Charges varies upon AMIs backed and storage volums.
+AMIs backed by instance storage charged for: AMI storage + Instance usage
+AMIs backed by Amazon EBS storage charged for: Volume storage + Usage in addition to the AMI + instance usage
+When an Amazon EBS-backed instance is stopped, you are not charged for instance usage, but you are still charged for volume storage.
+AWS charges a full instance hour for every transition from a stopped state to a running state, even if we transition the instance multiple times within a single hour.
+For example: if hourly instance charge for your instance is $0.10 and if you were to run that instance for one hour without stopping it, you would be charged $0.10. If you stopped and restarted that instance twice during that hour, then you would be charged $0.30 for that hour of usage (the initial $0.10, plus 2 x $0.10 for each restart).
+What is shared AMI?
+A shared AMI is an AMI that a developer created and made available for other developers to use.
+One of the easiest ways to get started with Amazon EC2 is to use a shared AMI that has the components you need and then add custom content. You can also create your own AMIs and share them with others.
+Note: Use a shared AMI at your own risk. Amazon can’t vouch for the integrity or security of AMIs shared by other Amazon EC2 users. AWS recommends that you get an AMI from a trusted source.
+How to disable Password-Based Logins for Root in Amazon EC2 Instance?
+Using a fixed root password for a public AMI is a security risk that can quickly become known. Even relying on users to change the password after the first login opens a small window of opportunity for potential abuse.
+Following are the steps to disable password-based remote logins for the root user.
+1.Open the /etc/ssh/sshd_config file with a text editor and locate the following line:
+#PermitRootLogin yes
+2. Change the line to:
+Permit Root Login without-password
+What is Public Key Credentials and how to install it?
+Amazon EC2 uses public–key cryptography to encrypt and decrypt login information. Public–key cryptography uses a public key to encrypt a piece of data, such as a password, then the recipient uses the private key to decrypt the data. The public and private keys are known as a key pair.
+After configuring the AMI to prevent logging in using a password, you must make sure users can log in using another mechanism.
+How to switch a user from Ec2-user to root in AWS?
+Ans: Sudo su
+
+What is ELB and use ?
+It is called Elastic load balancer It will use to provide the high availability of the network and control the input traffic and sharing eual
+Types of ELB and expain
+Application and Classic Load balancer
+Explain LVM
+It’s called Logical volume manager we can resize dynamically in online whit have a reboot
+SAN team will provide are attached a luns and they inform us the attaches luns or disk.
+ So we have to create the the partition as per the requirement of DB and APP team
+Created the PV VG and LV’s along with configuration of file systems 
+We can increase and decrease the LVM sizes lvextend and lvreduce commands
+What is the different B/W RPM and YUM how to find the RPM dependency packages in linux
+Creating the mount points and proving the access to the specific users  and add into /etc/fstab configuration file
+
+How to take the back up  
+For RDS database we have a retention backup It will take care that.
+If you want to take backup other than that we use to write a shell script and we will schedule that in crontab
+How to check the dependence packages
+ RPM – rpm –qR package name
+
+What is the LAMP and tell me the latest versions
+LAMP means Linux Apache Mysql PHP we will install the first if you want deploy u r application in to a server
+Linux 7
+Apache 24
+Mysql 54
+PHP 7
+
+What is AMI
+AMI means Amazon machine image .  It’s a template that provides the information (an operating system, an application server and applications) required to launch an instance, which is a copy of the AMI running as a virtual server in the cloud.  You can launch instances from as many different AMIs as you need.
+
+Tell me some of types instances in AWS
+Micro instance 
+General purpose 
+Compute Optimized
+GPU instance 
+GPU compute
+Memory Optimized
+Storage Optimized 
+
+Explain your existing infrastructure
+We have non prod and prod environmets.  Our application which are developed in word press and are hosted in cloud
+our cloud infrastructure contains one loadbalancer(ELB) 2 webservers(apache) and one DB server(mysql) with vpc network.
+we have created vpc with 2 subnets,one is public subnet and other is private subnet.loadbalancer is under pulic subnet and webserver,DB server are under private subnet.We are using jumpbox which is launched in public subnet to conect to webservers.
+we have installed LAMP first for suporting wordpress.
+We are using cloud watch for monitoring metrics  like cpu utilization and getting the alerts trough SNS service.
+we are using IAM for providing aws console access to different users.we have created diff grps with diff policies and added users to the grps.
+
+About BMC and explain how to raise the ticket
+What is RDS and how you configure
+What is JIRA tool and explain
+What is u r daliy activity as a AWS in u r current company
+How to migrate a server in to cloud ?
+What  is IAM and explain how to create the user and assign the policies
+How do  you take backup in RDS like point or selected window based
+Go to Instance Auction  Restore to Point in time
+
+Trouble shoot on ELB 
+What is samba server
+
+What is VPC and subnets expain with diagram
+
+Amazon Virtual Private Cloud (Amazon VPC) it allows you to launch Amazon Web Services (AWS) resources into a virtual network that you've defined
+
+Difference between stop and restart the instant 
+
+If Stop the instance IP we will loss the IP and when start the instance you will get other IP 
+Restart: you will get the same public IP for the instance  
+
+
+ 
+
+In AWS we will create a VPC with range of 10.0.0.0/16 within the VPC we create public subnet and private subnet. we created a Routers for public and private subnet. In the public subnet I will host my web server and my ELB which requires the internet connectivity. And I will create IGW and assign to my public RT. under private network I will lunch my DB server If you required internet connection for the private sever I will create a NAT under public RT and I will assign that to private RT. I will use NAT my private server for update the yum and etc….
+
+What is public subnet and private subnet ? 
+
+Public subnet have IGW for internet connectivity
+Private subnet not have the internet connectivity
+
+
+Server got terminated and you lost your key how you will re launch your server
+
+If the case is like terminated I will take one of my latest backup and lunch the new instance using with the created AMI and I create a new key pair for that instance 
+
+If not the case stop and lost the key I will create a AMI and lunch the new instance using with the created AMI and I create a new key pair for that instance 
+
+How to create ElasticIP and how you assign to the server
+
+Go elastic IP in ec2 navigation bar Elastic IP their allocate a new address and right click assign instance name and IP
+
+Will you enable reboot option while creating the AMI what will happens
+
+Yes, But It depends I need conformation from the client when we not enble the reboot option that server will get restart so the application in not be avillable. But we will get all the packages and services in that instances 
+ If without reboot also we can take but we are not sure that what are the packages and services will come for the AMI.
+
+What is different between AMI and snapshot
+
+AMI is backup of instance it can contain OS, Packages, Services
+Snapshot : it is backup of volume
+
+While creating a AMI is snapshot also will create?
+
+Yes, snapshot will create
+
+What is ELB
+
+It will balance the incoming traffic across the instances in a single Availability Zone or multiple Availability Zones
+What happens to my Amazon EC2 instances if I delete my Auto Scaling Group?
+If you have an Auto Scaling group with running instances and you choose to delete the Auto Scaling group, the instances will be terminated and the Auto Scaling group will be deleted.
+What is RDS and what is your role on that
+RDS Is called as Relational database service where we can lunch easly and fixable to set up ,scalling,taking snapshots
+
+In RDS we have different database services like Mysql, MariaDB, Oracle…in my sql I will configure like DB details and configure advance settings. I have a experice with lunching the mysql  on top of RDS and All 
+
+We can take the snapshot of the existing service like an image and we will migrate that in to arrora 
+Also we can able to take number of days back up using of restore to point in time in auctions 
+
+In my sql clinet we will take a backups and dumps using with command of 
+mysqldump username password DBname  > /path/appendfilename.sql	
+
+we can restore the dump to new DB  as 
+mysqldump username password DBname  < appendfilename.sql
+
+we can lunch our DB in multi  zones for high availability using of subnet groups at least we need 2 subnets to create in multi  zones
+
+Basic commands :
+
+Create database
+•	CREATE DATABASE databasename;
+•	Connect databasename;
+Display Databases
+•	Show databases;
+
+To delete database
+•	Drop database databasename;
+Creating Tables
+•	mysql> use databasename; 
+Database changed 
+•	mysql> CREATE TABLE tutorials_tbl( 
+-> tutorial_id INT NOT NULL AUTO_INCREMENT,
+ -> tutorial_title VARCHAR(100) NOT NULL,
+ -> tutorial_author VARCHAR(40) NOT NULL,
+ -> submission_date DATE, -> PRIMARY KEY ( tutorial_id ) 
+-> ); Query OK, 0 rows affected (0.16 sec) mysql>
+
+To check Tables
+•	show tables;   to see the entire table
+
+Deleting a Table
+•	root@host# mysql -u root -p
+Enter password:*******
+•	mysql> use TUTORIALS;
+Database changed
+•	mysql> DROP TABLE tutorials_tbl
+Query OK, 0 rows affected (0.8 sec)
+•	mysql>
+Insert data
+•	INSERT INTO table_name ( field1, field2,...fieldN ) VALUES ( value1, value2,...valueN );
+
+How to take back up or dump of MYSQL
+
+•	mysqldump -u root -p databasename > /dump/2.sql(saved path in server)
+
+How to import a dump to a database
+
+•	mysql -u root -p sample < /dump/2.sql
+
+sql related work other team will take care.
+
+Name the several layers of Cloud Computing.
+Here is the list of layers of the cloud computing
+•	PaaS – Platform as a Service
+•	IaaS – Infrastructure as a Service
+•	SaaS – Software as a Service
+How do you allow your app server to connect you DB server ?
+
+I will open mysql/arrora 3306 port with my app server private IP/32 , and SG
+
+What is parameter groups in RDS ? 
+I have never worked with the parameters but I know the use.
+We will use the parameter groups to tuning and custom our log and memory usages
+	
+Where you will find the logs in AWS ?  doubt ?
+
+
+What is role and polices doubt?
+
+ROLE : using of are creating new polices are combination of policies called as role
+
+polices: default polices call as polices  you may create new onle where we can google are in the specific portals
+
+if you want to disable the public DNS for an instance how you will do ?
+
+in the VPC select your VPC and go to auction  Edit DNS Hostname  mark as No.
+
+what are the main confirgation files in NAGIOS
+
+/usr/local/nagios/etc/nagios.cfg contains a number of directives that affect how Nagios operates
+how to create topic in in cloud watch 
+
+cloud watch is monitoring service in cloud you can collect and track 
+
+go to cloud watch service 
+
+select Alaram  create Alarm  -- > 
+1.Select Metric and assign the what metric you required
+2. define Alams:  Define whenever and auction settings 
+3. save changes
+
+How you assign the terminated instance privateIP to newly lunched instance how to get the sameIP
+
+If the terminated instance lunched under the VPC we can able to reassign that IP to new instance for that we have to re collect the IP from In cloud trail which will track all the activity of the IAM users. 
+
+In the stage of instance configuration we will select our VPC and subnet a item will enable called as network interface where I can assign my private IP to the new instance  
+AWS Cloud Trail increases visibility into your user and resource activity by recording AWS API calls. You can identify which users and accounts called AWS, the source IP address from which the calls were made, and when the calls occurred
+
+What is use of Elastic IP
+An Elastic IP address is a static IPv4 address designed for dynamic cloud computing. An Elastic IP address is associated with your AWS account. With an Elastic IP address, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account.
+
+
+
+
+
+How to change the instance type?
+Make sure that instance should be in the stop mode.
+Select the instance go to auctions instance settings Change instance Type
+You can connect the instance with the same key
+
+What Is Elastic bean stack?
+you can quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications. AWS Elastic Beanstalk reduces management complexity without restricting choice or control. You simply upload your application, and AWS Elastic Beanstalk automatically handles the details of capacity provisioning, load balancing, scaling, and application health monitoring.
+
+What is cloud Formation ?
+
+AWS Cloud Formation gives developers and systems administrators an easy way to create and manage a collection of related AWS resources, provisioning and updating them in an orderly and predictable fashion.
+
+Infrastructure as a code i will define my entire infrastructure as a code 
+quickly replicate the infrastructure
+cloud formation is a service provided by AWS. model to set up your AWS resources so that u can spend less time to manage their resources and more time focusing on application on AWS
+we will be creating a template those are that describes  all the aws resources and cloud formation will take care of provision and configuration for infrastructure
+we don’t  create any configuration and resources
+template (JSON, Amel)  declaration of resources
+stack   collection of resources 
+change set   
+Important attributes 
+Parameter: receiving input from user	
+
+What is Cloudfront ?
+Cloud front is content delivery network
+We have 2 different latencies in 1. Low latency (High availability) 2. High Latency (Low availability) 
+We can host simple static or dynamic web pages in S3 for Low latency (High availability) it is called cloud front
+
+Ex : your app in USA you’re accessing from India In every country we have put   edge location. 
+
+Edge location
+Edge locations are used in conjunction with the AWS CloudFront service which is a global Content Delivery Network service (more information on CloudFront can be found here).  Edge Locations are deployed across the world in multiple locations to reduce latency for traffic served over CloudFront and as a result are usually located in highly populated areas.
+ Elastic Cache
+The service improves the performance of web applications by allowing you to retrieve information from fast, managed, in-memory data stores, instead of relying entirely on slower disk-based databases
+
+What is Ansible 
+Ansible is an open source automation platform. Ansible can help you with configuration management, application deployment, task automation
+It is open source and agent less tool
+
+It is playbook
+
+
+
+We can automate our daily activity as automation
+Ex : 10 server NHINX installation req . 
+
+On IGW will assign to one VPC
+
+Explain about your self 
+What is elastic IP
+What is the difference between start/stop and restart in AWS CLI
+Explain how do you lunch instance in EC2
+
+Client request you to update them application without down time and latency of the application what you will suggest?
+Client want to change his index .html without down time what you will do
+How you will connect your private network severs
+What the services you have used in AWS 
+In RDS we will take a snap shot it means is we are increase the DB size are it just a dump?
+How do you configure wordpress and RDS
+What is VPC peering 
+How you will connect other VPC private instance 
+Is possible to use s3 bucket as volume 
+Can we create policy in IAM to give access for a particular bucket to a user 
+Do you know how to create the new policies in IAM
+How many client you are handling
+How many server are you working for each client
+What is your daily activities
+Have involved any time in architecture design 
+Are you involved any project from start up to up to build stage
+What is elasticbeam stack and what is the use
+You know Anssible 
+What is cloud front
+What you know in the linux
+In the linux we have two different team they requested you to create the suppurate partitions and which no body access other than the respected team
+What Is RDS cluster
+
+
+https://docs.openvpn.net/how-to-tutorialsguides/virtual-platforms/amazon-ec2-appliance-ami-quick-start-guide/
+
+Grep –I 
+
+Top –ph processID will give the more utlilisation process
+
+To find files only ls -ltR | grep –
+ls -ltR | grep "^-"
+
+Nfs package names
+Boot process
+Raid
+Shell script
+
+
+Scripts
+cloudformation
+
+
+
+
